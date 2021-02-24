@@ -37,7 +37,7 @@ Instructions and scripts to enable running multiple Google Drive instances simul
 
 # caveats
 
-* Using clipboard actions from Windows Explorer screen [User1] to Windows Explorer screen [User2] will not work, not vice versa.
+* Using clipboard actions from Windows Explorer screen [User1] to Windows Explorer screen [User2] will not work, nor vice versa.
 * Drag and drop of files between the Windows Explorer windows will not work.
 * Accessing the Google Drive from [User2] as [User1] will not work, nor vice versa. 
 * Using (shared) folders on the desktop PC to access files will work.
