@@ -1,5 +1,5 @@
 # multigdrive
-Scripts to enable running multiple Google Drive instances on Windows 10
+Instructions and scripts to enable running multiple Google Drive instances simultaneously on Windows 10
 
 # steps
 1) Create a new Windows 10 user, nomal account
