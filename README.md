@@ -17,21 +17,21 @@ Instructions and scripts to enable running multiple Google Drive instances simul
 13) Download PsExec from https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
 14) Install both
 15) Create a command file with the following lines (16, 17), replace [user2] and [password] for the earlier created user:
-16) @echo off
-17) psexec -d -u [user2] -p [password] "C:\Program Files\Google\Drive File Stream\45.0.12.0\GoogleDriveFS.exe"
+16) - @echo off
+17) - psexec -d -u [user2] -p [password] "C:\Program Files\Google\Drive File Stream\45.0.12.0\GoogleDriveFS.exe"
 18) This will automatically launch GoogleDriveFS.exe as the second user
 19) Create a Autohotkey script with the following lines (20-30):
-20) #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-21) SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-22) SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-23) #NoTrayIcon
-24) LWin & o::
-25) GetKeyState, state, o
-26) If state = D
-27)   Msgbox 'Pressed'
-28) Else 
-29)   run, psexec -d -u [user2] -p [password] "C:\windows\explorer.exe", , Min
-30) Return
+20) - #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+21) - SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+22) - SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+23) - #NoTrayIcon
+24) - LWin & o::
+25) - GetKeyState, state, o
+26) - If state = D
+27) -  Msgbox 'Pressed'
+28) - Else 
+29) -  run, psexec -d -u [user2] -p [password] "C:\windows\explorer.exe", , Min
+30) - Return
 31) Save and load the Autohotkey script
 32) Now the Left Windows Key + "O" will launch Windows Explorer as the other user [User2] , while Left Windows Key + "E" will still open Windows Explorer as [User1].
 
